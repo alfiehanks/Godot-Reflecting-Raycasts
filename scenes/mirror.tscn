@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2pndt6eq5wc"]
+
+[ext_resource type="Texture2D" uid="uid://ggkdaucjfhw1" path="res://assets/sprites/mirror.png" id="1_ph0t6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_on31n"]
+size = Vector2(16, 3)
+
+[node name="Mirror" type="StaticBody2D" groups=["mirrors"]]
+self_modulate = Color(0.494118, 0.619608, 0.576471, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ph0t6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_on31n")

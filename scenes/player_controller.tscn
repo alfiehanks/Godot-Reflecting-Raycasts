@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv3qgx42yyd44"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_yuaf6"]
+[ext_resource type="Texture2D" uid="uid://c63jciasm0443" path="res://assets/sprites/tower_base.png" id="2_y8ybk"]
+[ext_resource type="Texture2D" uid="uid://bx125himlx262" path="res://assets/sprites/tower_dish.png" id="3_klgng"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_yuaf6")
+
+[node name="Sprite_Base" type="Sprite2D" parent="."]
+texture = ExtResource("2_y8ybk")
+
+[node name="Sprite_Dish" type="Sprite2D" parent="."]
+texture = ExtResource("3_klgng")

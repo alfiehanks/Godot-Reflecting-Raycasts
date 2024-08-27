@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfr5ar80axmei"]
+
+[ext_resource type="PackedScene" uid="uid://cwvkundlrq3cp" path="res://test_block.tscn" id="1_s0efm"]
+[ext_resource type="PackedScene" uid="uid://dxkjc6tq51kaf" path="res://player.tscn" id="2_vdoy2"]
+
+[node name="World" type="Node2D"]
+
+[node name="TestBlock" parent="." instance=ExtResource("1_s0efm")]
+position = Vector2(204, 47)
+
+[node name="TestBlock2" parent="." instance=ExtResource("1_s0efm")]
+position = Vector2(177, 90)
+
+[node name="TestBlock3" parent="." instance=ExtResource("1_s0efm")]
+position = Vector2(138, 31)
+
+[node name="TestBlock4" parent="." instance=ExtResource("1_s0efm")]
+position = Vector2(118, 73)
+
+[node name="Player" parent="." instance=ExtResource("2_vdoy2")]
+position = Vector2(156, 57)
+metadata/_edit_group_ = true

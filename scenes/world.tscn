@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnub52jj70qjw"]
+
+[ext_resource type="PackedScene" uid="uid://d2pndt6eq5wc" path="res://scenes/mirror.tscn" id="1_s0efm"]
+[ext_resource type="PackedScene" uid="uid://cv3qgx42yyd44" path="res://scenes/player_controller.tscn" id="2_vdoy2"]
+
+[sub_resource type="GDScript" id="GDScript_s3til"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="World" type="Node2D"]
+script = SubResource("GDScript_s3til")
+
+[node name="Player" parent="." instance=ExtResource("2_vdoy2")]
+position = Vector2(142, 57)
+
+[node name="Mirrors (Add more and move them around!)" type="Node2D" parent="."]
+position = Vector2(15, 6)
+
+[node name="Mirror2" parent="Mirrors (Add more and move them around!)" instance=ExtResource("1_s0efm")]
+position = Vector2(152, 83)
+rotation = 1.5708
+
+[node name="Mirror4" parent="Mirrors (Add more and move them around!)" instance=ExtResource("1_s0efm")]
+position = Vector2(72, 69)
+rotation = -0.785398
+
+[node name="Mirror5" parent="Mirrors (Add more and move them around!)" instance=ExtResource("1_s0efm")]
+position = Vector2(96, 93)
+rotation = 1.0472

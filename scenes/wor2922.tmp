@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnub52jj70qjw"]
+
+[ext_resource type="PackedScene" uid="uid://d2pndt6eq5wc" path="res://scenes/mirror_block.tscn" id="1_s0efm"]
+[ext_resource type="PackedScene" uid="uid://cv3qgx42yyd44" path="res://scenes/player.tscn" id="2_vdoy2"]
+
+[sub_resource type="GDScript" id="GDScript_s3til"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="World" type="Node2D"]
+script = SubResource("GDScript_s3til")
+
+[node name="TestBlock9" parent="." instance=ExtResource("1_s0efm")]
+position = Vector2(60, 58)
+rotation = 1.43641
+
+[node name="TestBlock10" parent="." instance=ExtResource("1_s0efm")]
+position = Vector2(182, 53)
+rotation = 1.43641
+
+[node name="TestBlock11" parent="." instance=ExtResource("1_s0efm")]
+position = Vector2(126, 108)
+
+[node name="Player" parent="." instance=ExtResource("2_vdoy2")]
+position = Vector2(127, 51)
+metadata/_edit_group_ = true
+
+[editable path="Player"]
